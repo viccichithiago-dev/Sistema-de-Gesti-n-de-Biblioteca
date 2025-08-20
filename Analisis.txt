@@ -1,0 +1,16 @@
+Se solicita crear un sistema de gestión de biblioteca, este tiene funcionalidades de agregar libros,eliminar libros modificarlos , registrar prestamos, eliminar prestamos, devolver libros, buscar libros
+Preparaciones
+para eliminar un libro o modificarlo este debe existir, para registrar un préstamo debe existir un libro y un usuario
+para eliminar un préstamo este debe existir, devolver un libro para esto debe existir el libro prestado.
+
+Diseño :
+Clases: Biblioteca(padre de Libro) vamos a almacenar los libros y a tener control sobre ellos.
+Libro(hijo de Biblioteca) vamos a trabajar con los libros, asignándole sus atributos y funciones
+Usuario
+Prestamo
+Listas a necesitar:
+Lista de Usuarios
+Lista de libros disponibles
+Lista de libros no disponibles
+Lista de prestamos
+

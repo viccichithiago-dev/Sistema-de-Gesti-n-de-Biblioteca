@@ -4,7 +4,6 @@ public class Usuario {
     //Atributos
     private String nombre, apellido;
     private int dni;
-    // private HashSet<Prestamo> listaPrestamos = new HashSet<>();
 
     //Constructor
     public Usuario(String nombre, String apellido, int dni) {
@@ -41,11 +40,4 @@ public class Usuario {
     public String getApellido(){return this.apellido;}
     public int getDni(){return this.dni;}
 
-    //Métodos
-//    public void solicitarPrestamos(Prestamo libro){
-//        listaPrestamos.add(libro);
-//    };
-//    public void eliminarPrestamos(Prestamo libro){
-//        listaPrestamos.remove(libro);
-//    };
 }

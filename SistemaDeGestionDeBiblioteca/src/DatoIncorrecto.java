@@ -1,7 +1,5 @@
-package PACKAGE_NAME;
-
 public class DatoIncorrecto extends RuntimeException {
-  public DatoIncorrecto(String message) {
-    super(message);
-  }
+    public DatoIncorrecto(String message) {
+        super(message);
+    }
 }

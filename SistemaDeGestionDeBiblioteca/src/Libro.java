@@ -1,6 +1,7 @@
 public class Libro {
     //Atributos
     private String autor,nombre,reseña,genero;
+    private boolean disponibilidad = true;
     //Constructor
     public Libro(String autor,String nombre,String reseña,String genero){
         setAutor(autor);
@@ -34,6 +35,10 @@ public class Libro {
         }
         this.genero = genero;
     }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
     //getters
 
     public String getAutor() {
@@ -48,5 +53,9 @@ public class Libro {
     }
     public String getGenero(){
         return this.genero;
+    }
+
+    public boolean isDisponibilidad() {
+        return this.disponibilidad;
     }
 }

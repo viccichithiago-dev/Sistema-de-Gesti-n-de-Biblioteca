@@ -1,12 +1,21 @@
 import java.util.HashSet;
 
-import static java.lang.System.in;
-
 public class GestionBiblioteca {
-    HashSet<Libro> listaDeLibros = new HashSet();
-    HashSet<Usuario> listaDeUsuarios = new HashSet();
-    HashSet<Prestamo> listaDePrestamos = new HashSet();
+    private HashSet<Libro> listaDeLibros = new HashSet();
+    private HashSet<Usuario> listaDeUsuarios = new HashSet();
+    private HashSet<Prestamo> listaDePrestamos = new HashSet();
+    //Constructor
+    public GestionBiblioteca(){}
     //Metodos de la gestion
+    public HashSet<Libro> getListaDeLibros() {
+        return this.listaDeLibros;
+    }
+    public HashSet<Usuario> getListaDeUsuarios() {
+        return this.listaDeUsuarios;
+    }
+    public HashSet<Prestamo> getListaDePrestamos() {
+        return this.listaDePrestamos;
+    }   
     public void agregarLibro(Libro libro){
         listaDeLibros.add(libro);
     }
@@ -60,8 +69,20 @@ public class GestionBiblioteca {
         if(libro.isDisponibilidad()){
             Prestamo prestamo = new Prestamo(libro,26,usuario);
             libro.setDisponibilidad(false);
+            this.agregarPrestamos(prestamo);
             return "Prestamo Realizado con Exito!";
         }
         return "Prestamo no realizado con exito!";
+    }
+    public String buscarLibro(String nombreABuscar){
+        if (nombreABuscar == null || nombreABuscar.isBlank()) {
+            throw new DatoIncorrecto("El nombre del libro no puede ser nulo o estar en blanco");
+        }
+        for (Libro libro : listaDeLibros) {
+            if (libro.getNombre().equalsIgnoreCase(nombreABuscar)) {
+                return "Libro encontrado: " + libro.getNombre() + ", Autor: " + libro.getAutor();
+            }
+        }
+        return "Libro no encontrado!";
     }
 }

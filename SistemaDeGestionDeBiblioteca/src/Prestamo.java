@@ -37,7 +37,7 @@ public class Prestamo {
         return this.libro;
     }
 
-    public Usuario getPrestadoAUsuario() {
+    public Usuario getUsuario() {
         return this.prestadoAUsuario;
     }
 }
